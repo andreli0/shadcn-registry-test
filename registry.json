@@ -1,0 +1,83 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "uchile-base-ui",
+  "homepage": "https://github.com/uchile/ui-registry-test",
+  "items": [
+    {
+      "name": "base-ui",
+      "type": "registry:base",
+      "title": "Base UI + Tailwind base",
+      "description": "Foundation for the registry: Tailwind CSS v4 tokens, utilities, and Base UI.",
+      "dependencies": ["@base-ui/react", "clsx", "tailwind-merge"],
+      "files": [
+        { "path": "registry/base-ui/lib/utils.ts", "type": "registry:lib", "target": "@lib/utils.ts" },
+        { "path": "registry/base-ui/globals.css", "type": "registry:style", "target": "app/globals.css" }
+      ],
+      "cssVars": {
+        "light": {
+          "background": "oklch(1 0 0)",
+          "foreground": "oklch(0.145 0 0)",
+          "primary": "oklch(0.205 0 0)",
+          "primary-foreground": "oklch(0.985 0 0)",
+          "muted": "oklch(0.97 0 0)",
+          "muted-foreground": "oklch(0.556 0 0)",
+          "border": "oklch(0.922 0 0)",
+          "ring": "oklch(0.708 0 0)",
+          "radius": "0.625rem"
+        },
+        "dark": {
+          "background": "oklch(0.145 0 0)",
+          "foreground": "oklch(0.985 0 0)",
+          "primary": "oklch(0.985 0 0)",
+          "primary-foreground": "oklch(0.205 0 0)",
+          "muted": "oklch(0.269 0 0)",
+          "muted-foreground": "oklch(0.708 0 0)",
+          "border": "oklch(1 0 0 / 10%)",
+          "ring": "oklch(0.556 0 0)",
+          "radius": "0.625rem"
+        }
+      },
+      "config": { "style": "base-ui", "iconLibrary": "lucide", "rsc": true, "tsx": true, "tailwind": { "baseColor": "neutral" } }
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Botón accesible construido sobre Base UI Button.",
+      "dependencies": ["@base-ui/react"],
+      "files": [{ "path": "registry/base-ui/components/button.tsx", "type": "registry:ui", "target": "@ui/button.tsx" }]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Campo de texto con estilos Tailwind y la primitiva Input de Base UI.",
+      "dependencies": ["@base-ui/react"],
+      "files": [{ "path": "registry/base-ui/components/input.tsx", "type": "registry:ui", "target": "@ui/input.tsx" }]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "Checkbox accesible con indicador y estados de Base UI.",
+      "dependencies": ["@base-ui/react"],
+      "files": [{ "path": "registry/base-ui/components/checkbox.tsx", "type": "registry:ui", "target": "@ui/checkbox.tsx" }]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "Diálogo modal componible, con foco y portal administrados por Base UI.",
+      "dependencies": ["@base-ui/react"],
+      "files": [{ "path": "registry/base-ui/components/dialog.tsx", "type": "registry:ui", "target": "@ui/dialog.tsx" }]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Select accesible y posicionable con las primitivas de Base UI.",
+      "dependencies": ["@base-ui/react"],
+      "files": [{ "path": "registry/base-ui/components/select.tsx", "type": "registry:ui", "target": "@ui/select.tsx" }]
+    }
+  ]
+}

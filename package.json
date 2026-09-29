@@ -1,0 +1,21 @@
+{
+  "name": "base-ui-registry",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "bun@1.4.0",
+  "description": "A shadcn registry built with Base UI and Tailwind CSS.",
+  "scripts": {
+    "registry:build": "shadcn build",
+    "registry:validate": "shadcn registry validate",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@base-ui/react": "^1.8.0",
+    "@types/react": "^19.3.0",
+    "clsx": "^2.1.1",
+    "react": "^19.3.0",
+    "shadcn": "latest",
+    "tailwind-merge": "^3.7.0",
+    "typescript": "^7.0.2"
+  }
+}
