@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "uchile-base-ui",
-  "homepage": "https://github.com/uchile/ui-registry-test",
+  "name": "andreli0-base-ui",
+  "homepage": "https://github.com/andreli0/shadcn-registry-test",
   "items": [
     {
       "name": "base-ui",
@@ -45,6 +45,7 @@
       "title": "Button",
       "description": "Botón accesible construido sobre Base UI Button.",
       "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
       "files": [{ "path": "registry/base-ui/components/button.tsx", "type": "registry:ui", "target": "@ui/button.tsx" }]
     },
     {
@@ -53,6 +54,7 @@
       "title": "Input",
       "description": "Campo de texto con estilos Tailwind y la primitiva Input de Base UI.",
       "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
       "files": [{ "path": "registry/base-ui/components/input.tsx", "type": "registry:ui", "target": "@ui/input.tsx" }]
     },
     {
@@ -61,6 +63,7 @@
       "title": "Checkbox",
       "description": "Checkbox accesible con indicador y estados de Base UI.",
       "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
       "files": [{ "path": "registry/base-ui/components/checkbox.tsx", "type": "registry:ui", "target": "@ui/checkbox.tsx" }]
     },
     {
@@ -69,6 +72,7 @@
       "title": "Dialog",
       "description": "Diálogo modal componible, con foco y portal administrados por Base UI.",
       "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
       "files": [{ "path": "registry/base-ui/components/dialog.tsx", "type": "registry:ui", "target": "@ui/dialog.tsx" }]
     },
     {
@@ -77,6 +81,7 @@
       "title": "Select",
       "description": "Select accesible y posicionable con las primitivas de Base UI.",
       "dependencies": ["@base-ui/react"],
+      "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
       "files": [{ "path": "registry/base-ui/components/select.tsx", "type": "registry:ui", "target": "@ui/select.tsx" }]
     }
   ]

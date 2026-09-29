@@ -15,19 +15,41 @@ bun run registry:validate
 bun run registry:build
 ```
 
-El build genera `public/r/registry.json` y un archivo JSON por componente. Publica `public` en tu hosting estático o sírvelo desde una aplicación web.
+El build genera `public/r/registry.json` y un archivo JSON por componente. Es útil si quieres publicar un registry HTTP; para consumir este repositorio desde GitHub no es necesario generar ni desplegar esos archivos.
 
 ## Consumo
 
-Tras desplegarlo, registra la URL usando el namespace que quieras:
+El repositorio se puede consumir directamente desde GitHub. En el proyecto consumidor, inicializa shadcn si aún no existe `components.json`:
 
 ```bash
-bunx shadcn@latest registry add @uchile=https://tu-dominio.cl/r/{name}.json
-bunx shadcn@latest add @uchile/base-ui
-bunx shadcn@latest add @uchile/button @uchile/dialog
+bunx shadcn@latest init
 ```
 
-Instala primero `base-ui`: entrega los tokens Tailwind y `@/lib/utils`, requeridos por los demás componentes. El proyecto consumidor debe usar Tailwind CSS v4.
+Lista o inspecciona los items disponibles:
+
+```bash
+bunx shadcn@latest list andreli0/shadcn-registry-test
+bunx shadcn@latest view andreli0/shadcn-registry-test/button
+```
+
+Instala cualquier componente con su dirección GitHub:
+
+```bash
+bunx shadcn@latest add andreli0/shadcn-registry-test/button
+bunx shadcn@latest add andreli0/shadcn-registry-test/dialog
+```
+
+Cada componente instala automáticamente `base-ui`, que entrega los tokens Tailwind, `@/lib/utils` y Base UI. El proyecto consumidor debe usar Tailwind CSS v4. Para revisar cambios antes de escribir archivos:
+
+```bash
+bunx shadcn@latest add andreli0/shadcn-registry-test/button --dry-run
+```
+
+Valida el registry ya publicado con:
+
+```bash
+bunx shadcn@latest registry validate andreli0/shadcn-registry-test
+```
 
 ## Agregar un componente
 
