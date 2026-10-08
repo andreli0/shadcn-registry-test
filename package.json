@@ -17,5 +17,9 @@
     "shadcn": "latest",
     "tailwind-merge": "^3.7.0",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "embla-carousel-react": "^8.6.0",
+    "lucide-react": "^1.53.0"
   }
 }

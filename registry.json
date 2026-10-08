@@ -86,6 +86,15 @@
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
       "files": [{ "path": "registry/base-ui/components/select.tsx", "type": "registry:ui", "target": "@ui/select.tsx" }]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "title": "Carousel",
+      "description": "Carousel item for banner or image displays.",
+      "dependencies": ["@base-ui/react","embla-carousel-react", "lucide-react"],
+      "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
+      "files": [{ "path": "registry/base-ui/components/carousel.tsx", "type": "registry:ui", "target": "@ui/carousel.tsx" }]
     }
   ]
 }
