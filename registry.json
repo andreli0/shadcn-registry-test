@@ -115,7 +115,10 @@
       "description": "Badge component useful for tags",
       "dependencies": ["@base-ui/react", "class-variance-authority"],
       "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
-      "files": [{ "path": "registry/base-ui/components/badge.tsx", "type": "registry:ui", "target": "@ui/badge.tsx" }]
+      "files": [
+        { "path": "registry/base-ui/components/badge.tsx", "type": "registry:ui", "target": "@ui/badge.tsx" },
+        { "path": "registry/base-ui/components/badge-variants.ts", "type": "registry:ui", "target": "@ui/badge-variants.ts" }
+      ]
     }
   ]
 }
