@@ -7,16 +7,23 @@
   "scripts": {
     "registry:build": "shadcn build",
     "registry:validate": "shadcn registry validate",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@base-ui/react": "^1.8.0",
+    "@eslint/js": "^10.0.1",
     "@types/react": "^19.3.0",
     "clsx": "^2.1.1",
+    "eslint": "10.9.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
     "react": "^19.3.0",
     "shadcn": "latest",
     "tailwind-merge": "^3.7.0",
-    "typescript": "^7.0.2"
+    "typescript": "^6.0.0",
+    "typescript-eslint": "^8.71.1"
   },
   "dependencies": {
     "embla-carousel-react": "^8.6.0",

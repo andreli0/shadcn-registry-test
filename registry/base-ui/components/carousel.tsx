@@ -1,46 +1,18 @@
 "use client"
 
 import * as React from "react"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 import useEmblaCarousel, {
-  type UseEmblaCarouselType,
 } from "embla-carousel-react"
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
 
 import { Button } from "./button"
-
-type CarouselApi = UseEmblaCarouselType[1]
-type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
-type CarouselOptions = UseCarouselParameters[0]
-type CarouselPlugin = UseCarouselParameters[1]
-
-type CarouselProps = {
-  opts?: CarouselOptions
-  plugins?: CarouselPlugin
-  orientation?: "horizontal" | "vertical"
-  setApi?: (api: CarouselApi) => void
-}
-
-type CarouselContextProps = {
-  carouselRef: ReturnType<typeof useEmblaCarousel>[0]
-  api: ReturnType<typeof useEmblaCarousel>[1]
-  scrollPrev: () => void
-  scrollNext: () => void
-  canScrollPrev: boolean
-  canScrollNext: boolean
-} & CarouselProps
-
-const CarouselContext = React.createContext<CarouselContextProps | null>(null)
-
-function useCarousel() {
-  const context = React.useContext(CarouselContext)
-
-  if (!context) {
-    throw new Error("useCarousel must be used within a <Carousel />")
-  }
-
-  return context
-}
+import {
+  CarouselContext,
+  useCarousel,
+  type CarouselApi,
+  type CarouselProps,
+} from "./carousel-context"
 
 function Carousel({
   orientation = "horizontal",
@@ -95,6 +67,8 @@ function Carousel({
 
   React.useEffect(() => {
     if (!api) return
+    // Embla does not emit an initial select event, so initialize navigation state.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     onSelect(api)
     api.on("reInit", onSelect)
     api.on("select", onSelect)
@@ -232,11 +206,12 @@ function CarouselNext({
 }
 
 export {
-  type CarouselApi,
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
-  useCarousel,
 }
+export type { CarouselApi }
+// eslint-disable-next-line react-refresh/only-export-components
+export { useCarousel }

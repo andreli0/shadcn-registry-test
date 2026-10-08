@@ -92,9 +92,12 @@
       "type": "registry:ui",
       "title": "Carousel",
       "description": "Carousel item for banner or image displays.",
-      "dependencies": ["@base-ui/react","embla-carousel-react", "lucide-react"],
-      "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
-      "files": [{ "path": "registry/base-ui/components/carousel.tsx", "type": "registry:ui", "target": "@ui/carousel.tsx" }]
+      "dependencies": ["embla-carousel-react", "lucide-react"],
+      "registryDependencies": ["andreli0/shadcn-registry-test/button"],
+      "files": [
+        { "path": "registry/base-ui/components/carousel.tsx", "type": "registry:ui", "target": "@ui/carousel.tsx" },
+        { "path": "registry/base-ui/components/carousel-context.ts", "type": "registry:ui", "target": "@ui/carousel-context.ts" }
+      ]
     }
   ]
 }
