@@ -46,7 +46,10 @@
       "description": "Botón accesible construido sobre Base UI Button.",
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
-      "files": [{ "path": "registry/base-ui/components/button.tsx", "type": "registry:ui", "target": "@ui/button.tsx" }]
+      "files": [
+        { "path": "registry/base-ui/components/button.tsx", "type": "registry:ui", "target": "@ui/button.tsx" },
+        { "path": "registry/base-ui/components/button-variants.ts", "type": "registry:ui", "target": "@ui/button-variants.ts" }
+      ]
     },
     {
       "name": "input",
