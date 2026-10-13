@@ -10,8 +10,16 @@
       "description": "Foundation for the registry: Tailwind CSS v4 tokens, utilities, and Base UI.",
       "dependencies": ["@base-ui/react", "clsx", "tailwind-merge"],
       "files": [
-        { "path": "registry/base-ui/lib/utils.ts", "type": "registry:lib", "target": "@lib/utils.ts" },
-        { "path": "registry/base-ui/globals.css", "type": "registry:style", "target": "app/globals.css" }
+        {
+          "path": "registry/base-ui/lib/utils.ts",
+          "type": "registry:lib",
+          "target": "@lib/utils.ts"
+        },
+        {
+          "path": "registry/base-ui/globals.css",
+          "type": "registry:style",
+          "target": "app/globals.css"
+        }
       ],
       "cssVars": {
         "light": {
@@ -37,7 +45,13 @@
           "radius": "0.625rem"
         }
       },
-      "config": { "style": "base-ui", "iconLibrary": "lucide", "rsc": true, "tsx": true, "tailwind": { "baseColor": "neutral" } }
+      "config": {
+        "style": "base-ui",
+        "iconLibrary": "lucide",
+        "rsc": true,
+        "tsx": true,
+        "tailwind": { "baseColor": "neutral" }
+      }
     },
     {
       "name": "button",
@@ -47,8 +61,16 @@
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
       "files": [
-        { "path": "registry/base-ui/components/button.tsx", "type": "registry:ui", "target": "@ui/button.tsx" },
-        { "path": "registry/base-ui/components/button-variants.ts", "type": "registry:ui", "target": "@ui/button-variants.ts" }
+        {
+          "path": "registry/base-ui/components/button.tsx",
+          "type": "registry:ui",
+          "target": "@ui/button.tsx"
+        },
+        {
+          "path": "registry/base-ui/components/button-variants.ts",
+          "type": "registry:ui",
+          "target": "@ui/button-variants.ts"
+        }
       ]
     },
     {
@@ -58,7 +80,13 @@
       "description": "Campo de texto con estilos Tailwind y la primitiva Input de Base UI.",
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
-      "files": [{ "path": "registry/base-ui/components/input.tsx", "type": "registry:ui", "target": "@ui/input.tsx" }]
+      "files": [
+        {
+          "path": "registry/base-ui/components/input.tsx",
+          "type": "registry:ui",
+          "target": "@ui/input.tsx"
+        }
+      ]
     },
     {
       "name": "checkbox",
@@ -67,7 +95,13 @@
       "description": "Checkbox accesible con indicador y estados de Base UI.",
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
-      "files": [{ "path": "registry/base-ui/components/checkbox.tsx", "type": "registry:ui", "target": "@ui/checkbox.tsx" }]
+      "files": [
+        {
+          "path": "registry/base-ui/components/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "@ui/checkbox.tsx"
+        }
+      ]
     },
     {
       "name": "dialog",
@@ -76,7 +110,13 @@
       "description": "Diálogo modal componible, con foco y portal administrados por Base UI.",
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
-      "files": [{ "path": "registry/base-ui/components/dialog.tsx", "type": "registry:ui", "target": "@ui/dialog.tsx" }]
+      "files": [
+        {
+          "path": "registry/base-ui/components/dialog.tsx",
+          "type": "registry:ui",
+          "target": "@ui/dialog.tsx"
+        }
+      ]
     },
     {
       "name": "select",
@@ -85,7 +125,13 @@
       "description": "Select accesible y posicionable con las primitivas de Base UI.",
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
-      "files": [{ "path": "registry/base-ui/components/select.tsx", "type": "registry:ui", "target": "@ui/select.tsx" }]
+      "files": [
+        {
+          "path": "registry/base-ui/components/select.tsx",
+          "type": "registry:ui",
+          "target": "@ui/select.tsx"
+        }
+      ]
     },
     {
       "name": "carousel",
@@ -95,8 +141,16 @@
       "dependencies": ["embla-carousel-react", "lucide-react"],
       "registryDependencies": ["andreli0/shadcn-registry-test/button"],
       "files": [
-        { "path": "registry/base-ui/components/carousel.tsx", "type": "registry:ui", "target": "@ui/carousel.tsx" },
-        { "path": "registry/base-ui/components/carousel-context.ts", "type": "registry:ui", "target": "@ui/carousel-context.ts" }
+        {
+          "path": "registry/base-ui/components/carousel.tsx",
+          "type": "registry:ui",
+          "target": "@ui/carousel.tsx"
+        },
+        {
+          "path": "registry/base-ui/components/carousel-context.ts",
+          "type": "registry:ui",
+          "target": "@ui/carousel-context.ts"
+        }
       ]
     },
     {
@@ -106,7 +160,13 @@
       "description": "Card component",
       "dependencies": ["@base-ui/react"],
       "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
-      "files": [{ "path": "registry/base-ui/components/card.tsx", "type": "registry:ui", "target": "@ui/card.tsx" }]
+      "files": [
+        {
+          "path": "registry/base-ui/components/card.tsx",
+          "type": "registry:ui",
+          "target": "@ui/card.tsx"
+        }
+      ]
     },
     {
       "name": "badge",
@@ -116,8 +176,31 @@
       "dependencies": ["@base-ui/react", "class-variance-authority"],
       "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
       "files": [
-        { "path": "registry/base-ui/components/badge.tsx", "type": "registry:ui", "target": "@ui/badge.tsx" },
-        { "path": "registry/base-ui/components/badge-variants.ts", "type": "registry:ui", "target": "@ui/badge-variants.ts" }
+        {
+          "path": "registry/base-ui/components/badge.tsx",
+          "type": "registry:ui",
+          "target": "@ui/badge.tsx"
+        },
+        {
+          "path": "registry/base-ui/components/badge-variants.ts",
+          "type": "registry:ui",
+          "target": "@ui/badge-variants.ts"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "Badge component useful for tags",
+      "dependencies": ["@base-ui/react", "lucide-react"],
+      "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
+      "files": [
+        {
+          "path": "registry/base-ui/components/breadcrumb.tsx",
+          "type": "registry:ui",
+          "target": "@ui/breadcrumb.tsx"
+        }
       ]
     }
   ]
