@@ -202,6 +202,44 @@
           "target": "@ui/breadcrumb.tsx"
         }
       ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "Separator component",
+      "dependencies": [
+        "@base-ui/react",
+        "@base-ui/react/merge-props",
+        "@base-ui/react/use-render",
+        "class-variance-authority"
+      ],
+      "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
+      "files": [
+        {
+          "path": "registry/base-ui/components/separator.tsx",
+          "type": "registry:ui",
+          "target": "@ui/separator.tsx"
+        }
+      ]
+    },
+    {
+      "name": "item",
+      "type": "registry:ui",
+      "title": "Item",
+      "description": "Item component useful for diffentent uses",
+      "dependencies": ["@base-ui/react"],
+      "registryDependencies": [
+        "andreli0/shadcn-registry-test/base-ui",
+        "andreli0/shadcn-registry-test/separator"
+      ],
+      "files": [
+        {
+          "path": "registry/base-ui/components/item.tsx",
+          "type": "registry:ui",
+          "target": "@ui/item.tsx"
+        }
+      ]
     }
   ]
 }
