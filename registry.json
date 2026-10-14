@@ -210,8 +210,6 @@
       "description": "Separator component",
       "dependencies": [
         "@base-ui/react",
-        "@base-ui/react/merge-props",
-        "@base-ui/react/use-render",
         "class-variance-authority"
       ],
       "registryDependencies": ["andreli0/shadcn-registry-test/base-ui"],
